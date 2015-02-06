@@ -2,14 +2,25 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializePage();
-})
+	// alert("ready");
+	//initializePage();
+	$("a").click(function(e){
+		// alert("click");
+		e.preventDefault();
+		$(this).text(anagrammedName($(this).text()));
+	});
+});
 
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected!");
+	// console.log("Javascript connected!");
+	// $('a').click(function(e){
+	// 	alert("click");
+	// 	e.preventDefault();
+	// 	$(this).text(anagrammedName($(this).text());
+	// });
 }
 
 function anagrammedName(name) {
@@ -44,3 +55,4 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
